@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: "Pollo"
+  stock: 1
+  precio: 9.99
+  descripcion: "Aaaaaaaaaaaaaa"
+
+two:
+  nombre: "Carne"
+  stock: 1
+  precio: 9.99
+  descripcion: "bbbbbbbbbbbbbbbbbb"
