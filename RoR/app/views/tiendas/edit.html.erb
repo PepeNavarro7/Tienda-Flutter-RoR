@@ -1,0 +1,7 @@
+<% if logged_in? %>
+<h1>Editar Tienda</h1>
+
+<%= render 'form', tienda: @tienda %>
+
+<%= link_to 'Volver', tiendas_path, class: 'btn4' %>
+<% end %>

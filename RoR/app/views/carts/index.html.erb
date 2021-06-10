@@ -1,0 +1,36 @@
+
+
+<p id="notice"><%= notice %></p>
+<h3><a class='inicio' href="/DS11">Inicio</a></h3><br>
+<% if logged_in? %>
+<h1>Cestas</h1>
+
+<table>
+  <thead>
+    <tr class="cabecera_tabla">
+      <th>Fecha</th>
+      <th>Tienda</th>
+      <th>Cliente</th>
+      <th>Recogida</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @carts.each do |cart| %>
+      <tr class="datos_tabla">
+        <td><%= cart.fecha %></td>
+        <td><%= cart.tienda_id %></td>
+        <td><%= cart.cliente_id %></td>
+        <td><%= cart.recogida %></td>
+        <td><%= link_to 'Mostrar', cart, class: "btn4" %></td>
+        <td><%= link_to 'Editar', edit_cart_path(cart), class: "btn4" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nueva cesta', new_cart_path, class: "btn3" %>
+<% end %>

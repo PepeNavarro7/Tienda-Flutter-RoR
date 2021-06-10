@@ -1,0 +1,39 @@
+
+<p id="notice"><%= notice %></p>
+<h3><a class='inicio' href="/DS11">Inicio</a></h3><br>
+<% if logged_in? %>
+
+<h1>Productos</h1>
+
+<table>
+  <thead>
+    <tr class="cabecera_tabla">
+    <th>Id</th>
+      <th>Nombre</th>
+      <th>Stock</th>
+      <th>Precio</th>
+      <th>Descripción</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @productos.each do |producto| %>
+      <tr class="datos_tabla">
+        <td><%= producto.id %></td>
+        <td><%= producto.nombre %></td>
+        <td><%= producto.stock %></td>
+        <td><%= producto.precio %></td>
+        <td><%= producto.descripcion %></td>
+        <td><%= link_to 'Mostrar información de producto', producto, class: "btn4" %></td>
+        <td><%= link_to 'Editar', edit_producto_path(producto), class: "btn4" %></td>
+        <td><%= link_to 'Borrar producto', producto, method: :delete, data: { confirm: '¿Seguro que quieres eliminar el producto?' }, class: "btn4" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Añadir producto', new_producto_path, class: 'btn3' %>
+<% end %>

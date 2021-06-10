@@ -1,0 +1,22 @@
+<%= form_with(model: tienda) do |form| %>
+  <% if tienda.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tienda.errors.count, "error") %> prohibited this tienda from being saved:</h2>
+
+      <ul>
+        <% tienda.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :ubicacion %>
+    <%= form.text_field :ubicacion %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: "btn4"%>
+  </div>
+<% end %>

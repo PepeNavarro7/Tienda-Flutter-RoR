@@ -1,0 +1,33 @@
+<% if logged_in? %>
+<p id="notice"><%= notice %></p>
+<h3><a class='inicio' href="/DS11">Inicio</a></h3><br>
+
+
+<h1>Administradores</h1>
+
+<table>
+  <thead>
+    <tr class="cabecera_tabla">
+      <th>Id</th>
+      <th>Usuario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin.each do |admin| %>
+      <tr class="datos_tabla">
+        <td><%= admin.id %></td>
+        <td><%= admin.username %></td>
+        <td><%= link_to 'Mostrar', admin, class: "btn4" %></td>
+        <td><%= link_to 'Editar información', edit_admin_path(admin), class: "btn4" %></td>
+        <td><%= link_to 'Borrar administrador', admin, method: :delete, data: { confirm: '¿Seguro que quieres eliminar el usuario?' } , class: "btn4" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo administrador', new_admin_path, class: "btn3" %>
+<% end %>

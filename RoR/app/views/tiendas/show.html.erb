@@ -1,0 +1,9 @@
+<% if logged_in? %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ubicacion:</strong>
+  <%= @tienda.ubicacion %>
+</p>
+<%= link_to 'Volver', tiendas_path, class: 'btn4' %>
+<% end %>

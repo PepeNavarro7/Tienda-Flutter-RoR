@@ -1,0 +1,10 @@
+<h3><a class='inicio' href="/DS11">Inicio</a></h3><br>
+<p id="notice_error"><%= notice %></p>
+<h1>Iniciar Sesión</h1>
+   <%= form_tag '/DS11/login' do %>
+   <%= label_tag :Usuario%>
+   <%= text_field_tag :username %><br><br>
+   <%= label_tag :Contraseña%>
+   <%= password_field_tag :password%><br><br>
+   <%= submit_tag "Login" , class: 'btn'%>
+<%end%>

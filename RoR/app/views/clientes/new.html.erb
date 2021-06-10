@@ -1,0 +1,7 @@
+<% if logged_in? %>
+<h1>New Cliente</h1>
+
+<%= render 'form', cliente: @cliente %>
+
+<%= link_to 'Volver', clientes_path,class: "btn4" %>
+<% end %>

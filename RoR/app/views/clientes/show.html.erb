@@ -1,0 +1,21 @@
+<% if logged_in? %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @cliente.nombre %>
+</p>
+
+<p>
+  <strong>Apellidos:</strong>
+  <%= @cliente.apellidos %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @cliente.email %>
+</p>
+
+<%= link_to 'Editar información', edit_cliente_path(@cliente), class: "btn4" %> |
+<%= link_to 'Volver', clientes_path, class: "btn4" %>
+<% end %>

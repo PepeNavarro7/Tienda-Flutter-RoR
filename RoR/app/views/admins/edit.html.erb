@@ -1,0 +1,8 @@
+<% if logged_in? %>
+<h1>Editando administrador</h1>
+
+<%= render 'form', admin: @admin %>
+
+<%= link_to 'Mostrar información', @admin, class: 'btn4' %> |
+<%= link_to 'Volver', admins_path, class: 'btn4' %>
+<% end %>

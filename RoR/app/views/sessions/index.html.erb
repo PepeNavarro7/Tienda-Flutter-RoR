@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+<h1>DANI WEB ADMIN</h1>
+<% if logged_in? %>
+    <h4>Bienvenido a la aplicación de Dani para Trabajadores, <%= current_admin.username %></h4>
+    <%= button_to "Tiendas", '/DS11/tiendas', method: :get, class: 'btn' %>
+    <%= button_to "Productos", '/DS11/productos', method: :get, class: 'btn' %>
+    <%= button_to "Clientes", '/DS11/clientes', method: :get, class: 'btn' %>
+    <%= button_to "Cestas", '/DS11/carts', method: :get, class: 'btn'%>
+    <%= button_to "Administradores", '/DS11/admins', method: :get, class: 'btn' %>
+    <br><br>
+    <%= button_to "Cerrar Sesión", '/DS11/logout', method: :get, class: 'btn2' %>
+<% else %>
+<h4>Bienvenido a la aplicación de Dani para Trabajadores </h4><br>
+    <%= button_to "Iniciar sesión", '/DS11/login', method: :get, class: 'btn2'%><br>
+    <p>*Para tener una cuenta de administrador, pídaselo a su gerente</p>
+
+<% end %>

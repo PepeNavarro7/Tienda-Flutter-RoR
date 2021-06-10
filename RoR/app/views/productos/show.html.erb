@@ -1,0 +1,25 @@
+<% if logged_in? %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @producto.nombre %>
+</p>
+
+<p>
+  <strong>Stock:</strong>
+  <%= @producto.stock %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @producto.precio %>
+</p>
+
+<p>
+  <strong>Descripción:</strong>
+  <%= @producto.descripcion %>
+</p>
+
+<%= link_to 'Volver', productos_path,class: "btn4" %>
+<% end %>

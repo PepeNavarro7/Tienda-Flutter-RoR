@@ -1,0 +1,25 @@
+<% if logged_in? %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @cart.fecha %>
+</p>
+
+<p>
+  <strong>Tienda:</strong>
+  <%= @cart.tienda_id %>
+</p>
+
+<p>
+  <strong>Cliente:</strong>
+  <%= @cart.cliente_id %>
+</p>
+
+<p>
+  <strong>Recogida:</strong>
+  <%= @cart.recogida %>
+</p>
+
+<%= link_to 'Volver', carts_path, class: "btn4" %>
+<% end %>

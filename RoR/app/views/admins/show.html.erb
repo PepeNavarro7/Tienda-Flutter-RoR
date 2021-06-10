@@ -1,0 +1,16 @@
+<% if logged_in? %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @admin.username %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @admin.email %>
+</p>
+
+<%= link_to 'Editar información', edit_admin_path(@admin),class: "btn4" %> |
+<%= link_to 'Volver', admins_path, class: "btn4" %>
+<% end %>

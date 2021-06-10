@@ -1,0 +1,7 @@
+<% if logged_in? %>
+<h1>Editando cesta</h1>
+
+<%= render 'form', cart: @cart %>
+
+<%= link_to 'Volver', carts_path, class: "btn4" %>
+<% end %>

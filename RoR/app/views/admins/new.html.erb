@@ -1,0 +1,14 @@
+
+<h3><a href="/DS11">Inicio</a></h3>
+<% if logged_in? %>
+<h1>Crear nuevo administrador</h1>
+<%= form_for @admin do |f|%>
+  <%= f.label :Usuario%>
+  <%= f.text_field :username%><br> <br>
+  <%= f.label :Contraseña%>
+  <%= f.password_field :password%><br> <br> 
+  <%= f.submit class: "btn4" %>
+<%end%>
+<br>
+<%= link_to 'Volver', admins_path, class: "btn4" %>
+<% end %>

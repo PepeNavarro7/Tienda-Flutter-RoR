@@ -1,0 +1,7 @@
+<% if logged_in? %>
+<h1>Editar Producto</h1>
+
+<%= render 'form', producto: @producto %>
+
+<%= link_to 'Volver', productos_path,class: "btn4" %>
+<% end %>
